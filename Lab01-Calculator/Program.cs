@@ -26,6 +26,10 @@ namespace Lab01_Calculator
             string input = Console.ReadLine();
 
             int userNumber = Convert.ToInt32(input);
+
+            int[] userArray = new int[userNumber];
+
+            Populate(userArray);
         }
 
         static int[] Populate(int[] array)
