@@ -29,6 +29,9 @@ namespace Lab01_Calculator
         {
             Console.WriteLine("Please enter a number greater than zero");
             string input = Console.ReadLine();
+
+            int userNumber = Convert.ToInt32(input);
+
         }
 
         static int[] Populate(int[] array)
