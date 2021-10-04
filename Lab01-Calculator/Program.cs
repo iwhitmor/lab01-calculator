@@ -20,14 +20,15 @@ namespace Lab01_Calculator
             finally
 
             {
-                Console.WriteLine("Let's Go!");
+                Console.WriteLine("Welcome to my game! Let's get started!");
             }
             
         }
 
         static void StartSequence()
         {
-            
+            Console.WriteLine("Please enter a number greater than zero");
+            string input = Console.ReadLine();
         }
 
         static int[] Populate(int[] array)
