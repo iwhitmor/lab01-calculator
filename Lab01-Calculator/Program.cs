@@ -9,6 +9,7 @@ namespace Lab01_Calculator
             try
             {
                 StartSequence();
+               
             }
             catch (Exception ex)
             {
@@ -25,6 +26,7 @@ namespace Lab01_Calculator
 
             try
             {
+                Console.WriteLine("Welcome to my game. Let's have some fun!");
                 Console.WriteLine("Please enter a number greater than zero");
                 string input = Console.ReadLine();
 
