@@ -22,14 +22,28 @@ namespace Lab01_Calculator
 
         static void StartSequence()
         {
-            Console.WriteLine("Please enter a number greater than zero");
-            string input = Console.ReadLine();
 
-            int userNumber = Convert.ToInt32(input);
+            try
+            {
+                Console.WriteLine("Please enter a number greater than zero");
+                string input = Console.ReadLine();
 
-            int[] userArray = new int[userNumber];
+                int userNumber = Convert.ToInt32(input);
 
-            Populate(userArray);
+                int[] userArray = new int[userNumber];
+
+                Populate(userArray);
+            }
+
+            catch (FormatException fex)
+            {
+                Console.WriteLine("That is not a number");
+            }
+
+            catch (OverflowException oex)
+            {
+                Console.WriteLine("That number is too big");
+            }
         }
 
         static int[] Populate(int[] array)
@@ -40,6 +54,9 @@ namespace Lab01_Calculator
                 Console.WriteLine("Please enter a number: ");
                 string input = Console.ReadLine();
 
+                int userNumber = Convert.ToInt32(input);
+
+                array[i] = userNumber;
             } 
 
             return array;
