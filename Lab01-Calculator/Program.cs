@@ -10,9 +10,9 @@ namespace Lab01_Calculator
             {
                 StartSequence();
             }
-            catch (Exception)
+            catch (Exception ex)
             {
-                Console.WriteLine("I'm sorry, but something has gone terribly wrong");
+                Console.WriteLine("I'm sorry, but something has gone terribly wrong. " + ex.Message);
             }
             finally
             {
@@ -33,6 +33,7 @@ namespace Lab01_Calculator
                 int[] userArray = new int[userNumber];
 
                 Populate(userArray);
+                GetSum(userArray);
             }
 
             catch (FormatException)
@@ -64,7 +65,19 @@ namespace Lab01_Calculator
 
         static int GetSum(int[] array)
         {
-            return 1;
+            int sum = 0;
+
+            for (int i = 0; i < array.Length; i++)
+            {
+                sum += array[i];
+            }
+
+            if (sum < 20)
+            {
+                throw new ApplicationException($"Value of {sum} is too low");
+            }
+
+            return sum;
         }
 
         static int GetProduct(int[] array, int sum)
