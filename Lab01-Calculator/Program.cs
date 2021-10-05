@@ -87,7 +87,9 @@ namespace Lab01_Calculator
         {
             Console.WriteLine($"Please enter a number between 1 and {array.Length}");
             string input = Console.Readline();
+
+            return 1;
         }
-        return 1;
+        
     }
 }
