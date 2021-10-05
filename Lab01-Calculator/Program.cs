@@ -35,12 +35,12 @@ namespace Lab01_Calculator
                 Populate(userArray);
             }
 
-            catch (FormatException fex)
+            catch (FormatException)
             {
                 Console.WriteLine("That is not a number");
             }
 
-            catch (OverflowException oex)
+            catch (OverflowException)
             {
                 Console.WriteLine("That number is too big");
             }
