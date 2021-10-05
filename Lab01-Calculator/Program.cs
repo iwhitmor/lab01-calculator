@@ -27,7 +27,7 @@ namespace Lab01_Calculator
             try
             {
                 Console.WriteLine("Welcome to my game. Let's have some fun!");
-                Console.WriteLine("Please enter a number greater than zero");
+                Console.WriteLine("Please enter a number greater than zero:");
                 string input = Console.ReadLine();
 
                 int userNumber = Convert.ToInt32(input);
@@ -36,6 +36,7 @@ namespace Lab01_Calculator
 
                 Populate(userArray);
                 GetSum(userArray);
+                GetProduct(userArray);
             }
 
             catch (FormatException)
@@ -84,7 +85,9 @@ namespace Lab01_Calculator
 
         static int GetProduct(int[] array, int sum)
         {
-            return 1;
+            Console.WriteLine($"Please enter a number between 1 and {array.Length}");
+            string input = Console.Readline();
         }
+        return 1;
     }
 }
