@@ -33,10 +33,11 @@ namespace Lab01_Calculator
                 int userNumber = Convert.ToInt32(input);
 
                 int[] userArray = new int[userNumber];
-
+                
                 Populate(userArray);
                 GetSum(userArray);
-                GetProduct(userArray);
+                int sum = GetSum(userArray);
+                int product = GetProduct(userArray, sum);
             }
 
             catch (FormatException)
@@ -86,7 +87,7 @@ namespace Lab01_Calculator
         static int GetProduct(int[] array, int sum)
         {
             Console.WriteLine($"Please enter a number between 1 and {array.Length}");
-            string input = Console.Readline();
+            string input = Console.ReadLine();
 
             return 1;
         }
