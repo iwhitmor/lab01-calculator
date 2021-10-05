@@ -16,7 +16,7 @@ namespace Lab01_Calculator
             }
             finally
             {
-                Console.WriteLine("Welcome to my game! Let's get started!");
+                Console.WriteLine("Thanks for playing!");
             }        
         }
 
@@ -33,13 +33,23 @@ namespace Lab01_Calculator
         }
 
         static int[] Populate(int[] array)
-        { 
+        {
+            for (int i = 0; i < array.Length; i++)
+            {
+
+                Console.WriteLine("Please enter a number: ");
+                string input = Console.ReadLine();
+
+            } 
+
             return array;
         }
+
         static int GetSum(int[] array)
         {
             return 1;
         }
+
         static int GetProduct(int[] array, int sum)
         {
             return 1;
