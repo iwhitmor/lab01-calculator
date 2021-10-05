@@ -89,7 +89,9 @@ namespace Lab01_Calculator
             Console.WriteLine($"Please enter a number between 1 and {array.Length}");
             string input = Console.ReadLine();
 
-            return 1;
+            int product = int sum * int[] array;
+
+            return product;
         }
         
     }
